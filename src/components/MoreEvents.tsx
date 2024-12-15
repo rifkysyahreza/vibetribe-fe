@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8080";
+const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me";
 
 const MoreEventSection: React.FC = () => {
   const [events, setEvents] = useState<any[]>([]);

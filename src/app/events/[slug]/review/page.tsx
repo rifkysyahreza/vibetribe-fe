@@ -10,7 +10,7 @@ interface ReviewPageProps {
   params: { slug: string };
 }
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8080";
+const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me";
 
 const ReviewPage: React.FC<ReviewPageProps> = ({ params }) => {
   const { isLoggedIn, getJwtToken } = useAuth();

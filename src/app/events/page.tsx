@@ -17,7 +17,7 @@ const EventsPage = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/events");
+        const response = await fetch("http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/events");
         const result = await response.json();
 
         if (result.success) {

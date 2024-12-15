@@ -13,7 +13,7 @@ interface Review {
   userId: string; 
 }
 
-const BASE_URL = "http://localhost:8080";
+const BASE_URL = "http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me";
 
 const ReviewPopup: React.FC = () => {
   const [reviews, setReviews] = useState<Review[]>([]);

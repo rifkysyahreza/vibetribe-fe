@@ -22,7 +22,7 @@ const EventStatisticsPage: React.FC = () => {
 
     const fetchStatistics = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/v1/events/statistics", {
+        const response = await fetch("http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/events/statistics", {
           method: "GET",
           headers: { Authorization: `Bearer ${token}` },
         });

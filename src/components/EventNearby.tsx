@@ -32,7 +32,7 @@ const EventSection: React.FC = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          `http://localhost:8080/api/v1/events?location=${encodeURIComponent(location)}`
+          `http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/events?location=${encodeURIComponent(location)}`
         );
         const data = await response.json();
         console.log(data);

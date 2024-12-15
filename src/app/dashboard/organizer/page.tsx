@@ -81,11 +81,11 @@ const OrganizerDashboard: React.FC = () => {
   
     try {
       const [responseEvents, responseProfile] = await Promise.all([
-        fetch("http://localhost:8080/api/v1/events/organizer?size=100", {
+        fetch("http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/events/organizer?size=100", {
           method: "GET",
           headers: { Authorization: `Bearer ${token}` },
         }),
-        fetch("http://localhost:8080/api/v1/user/details", {
+        fetch("http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/user/details", {
           method: "GET",
           headers: { Authorization: `Bearer ${token}` },
         }),
@@ -136,7 +136,7 @@ const OrganizerDashboard: React.FC = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8080/api/v1/events/statistics", {
+      const response = await fetch("http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/events/statistics", {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -162,7 +162,7 @@ const OrganizerDashboard: React.FC = () => {
     }
   
     try {
-      const response = await fetch("http://localhost:8080/api/v1/events/transaction-history", {
+      const response = await fetch("http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/events/transaction-history", {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -191,7 +191,7 @@ const OrganizerDashboard: React.FC = () => {
     }
   
     try {
-      const response = await fetch("http://localhost:8080/api/v1/reviews/by-organizer", {
+      const response = await fetch("http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/reviews/by-organizer", {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -218,7 +218,7 @@ const OrganizerDashboard: React.FC = () => {
     }
   
     try {
-      const response = await fetch("http://localhost:8080/api/v1/vouchers/upcoming", {
+      const response = await fetch("http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/vouchers/upcoming", {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -280,7 +280,7 @@ const OrganizerDashboard: React.FC = () => {
   
     try {
       // Make the API request to create the voucher
-      const response = await fetch("http://localhost:8080/api/v1/vouchers/create", {
+      const response = await fetch("http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/vouchers/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -333,7 +333,7 @@ const OrganizerDashboard: React.FC = () => {
     if (profilePicture) formData.append("profilePicture", profilePicture);
 
     try {
-      const response = await fetch("http://localhost:8080/api/v1/user/update-profile", {
+      const response = await fetch("http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/user/update-profile", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

@@ -23,7 +23,7 @@ const Header: React.FC = () => {
   const locationInputRef = useRef<HTMLInputElement>(null);
   const eventInputRef = useRef<HTMLInputElement>(null);
 
-  const baseUrl = "http://localhost:8080";
+  const baseUrl = "http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me";
 
   useEffect(() => {
     const fetchUserData = async () => {
