@@ -24,7 +24,7 @@ const FindTicketPage: React.FC = () => {
 
     const fetchEvents = async () => {
       try {
-        const response = await fetch('http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/events/upcoming', {
+        const response = await fetch('http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/events/upcoming', {
           method: 'GET',
           headers: { Authorization: `Bearer ${token}` },
         });

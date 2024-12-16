@@ -25,7 +25,7 @@ interface Event {
 }
 
 const fetchEventsByLocation = async (location: string): Promise<Event[]> => {
-  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me";
+  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me";
   const encodedLocation = encodeURIComponent(location);
 
   const res = await fetch(`${baseUrl}/api/v1/events?location=${encodedLocation}`);

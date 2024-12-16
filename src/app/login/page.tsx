@@ -26,7 +26,7 @@ const LoginContent: React.FC = () => {
 
     const api = {
       login: async (email: string, password: string) => {
-        const response = await fetch("http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/login", {
+        const response = await fetch("http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, password }),
@@ -41,7 +41,7 @@ const LoginContent: React.FC = () => {
       },
 
       getUserDetails: async (token: string) => {
-        const response = await fetch("http://http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/user/details", {
+        const response = await fetch("http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/user/details", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
