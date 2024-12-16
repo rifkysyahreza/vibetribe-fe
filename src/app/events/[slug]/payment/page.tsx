@@ -30,7 +30,7 @@ const PaymentPage: React.FC<PaymentPageProps> = ({ params }) => {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
-    voucher: '',
+    voucher: null,
     points: '',
     paymentMethod: 'credit-card',
     quantity: '',
@@ -292,6 +292,19 @@ const PaymentPage: React.FC<PaymentPageProps> = ({ params }) => {
   
     try {
       const token = getJwtToken();
+      console.log(JSON.stringify({
+        // eventSlug: event.slug,
+        eventId: eventId,
+        // fullName: formData.fullName,
+        // email: formData.email,
+        // voucherId: formData.voucherId,
+        voucherCode: formData.voucher,
+        // points: points,
+        // paymentMethod: formData.paymentMethod,
+        quantity: quantity,
+        isUsePoints: !!formData.points,
+        // discountApplied: discount,
+      }))
       const response = await fetch(`${BASE_URL}/api/v1/transactions`, {
         method: "POST",
         headers: {
@@ -299,17 +312,17 @@ const PaymentPage: React.FC<PaymentPageProps> = ({ params }) => {
           Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
-          eventSlug: event.slug,
-          eventId: eventId,  
-          fullName: formData.fullName,
-          email: formData.email,
+          // eventSlug: event.slug,
+          eventId: eventId,
+          // fullName: formData.fullName,
+          // email: formData.email,
           // voucherId: formData.voucherId,
           voucherCode: formData.voucher,
-          points: points,
-          paymentMethod: formData.paymentMethod,
+          // points: points,
+          // paymentMethod: formData.paymentMethod,
           quantity: quantity,
           isUsePoints: !!formData.points,
-          discountApplied: discount, 
+          // discountApplied: discount,
         }),
       });
   
