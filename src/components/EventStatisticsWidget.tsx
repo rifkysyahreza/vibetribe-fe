@@ -152,7 +152,8 @@ const EventStatisticsWidget: React.FC<EventStatisticsProps> = ({ statistics }) =
 
         {/* Chart Display */}
         <div className="chart-container mb-5">
-          <Bar data={data} options={chartType === 'monthly' ? monthlyChartOptions : yearlyChartOptions} />
+          {/* // eslint-disable-next-line */}
+          {/*<Bar data={data} options={chartType === 'monthly' ? monthlyChartOptions : yearlyChartOptions} />*/}
         </div>
       </div>
     </div>

@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
     styledComponents: true,
   },
   images: {
+    loader: 'default', // Added default loader
+    formats: ['image/webp'], // Added support for WebP format
     domains: [
       'example.com',
       'img.icons8.com',
@@ -29,6 +31,8 @@ const nextConfig: NextConfig = {
       'wordpress.com',
       'cdn1-production-images-kly.akamaized.net',
       'people.com',
+      'cdnb.artstation.com',
+      'akcdn.detik.net.id',
     ],
   },
   async redirects() {

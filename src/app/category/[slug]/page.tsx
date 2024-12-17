@@ -31,13 +31,7 @@ const fetchEventsByCategory = async (category: string): Promise<Event[]> => {
   return data.data.content;
 };
 
-interface CategoryPageProps {
-  params: {
-    slug: string;
-  };
-}
-
-const CategoryPage: React.FC<CategoryPageProps> = ({ params }) => {
+const CategoryPage = ({params} : any) => {
   const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 

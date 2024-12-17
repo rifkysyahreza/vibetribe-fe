@@ -27,7 +27,7 @@ interface Organizer {
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me";
 
-const EventPage: React.FC<EventPageProps> = ({ params }) => {
+const EventPage= ({ params } : any) => {
   const [slug, setSlug] = useState<string>("");
   const [event, setEvent] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);

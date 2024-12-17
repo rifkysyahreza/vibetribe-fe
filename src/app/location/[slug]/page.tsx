@@ -44,7 +44,7 @@ interface LocationPageProps {
   };
 }
 
-const LocationPage: React.FC<LocationPageProps> = ({ params }) => {
+const LocationPage = ({ params } : any) => {
   const [slug, setSlug] = useState<string | null>(null);
   const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
