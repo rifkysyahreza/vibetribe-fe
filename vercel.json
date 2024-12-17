@@ -1,0 +1,8 @@
+{
+  "build": {
+    "env": {
+      "NODE_ENV": "production",
+      "NEXT_SHARP_IGNORE_GLOBAL_LIBVIPS": "1"
+    }
+  }
+}
