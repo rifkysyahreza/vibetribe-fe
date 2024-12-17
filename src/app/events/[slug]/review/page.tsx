@@ -10,7 +10,7 @@ interface ReviewPageProps {
   params: { slug: string };
 }
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me";
+const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://vibetribe-be-production.up.railway.app";
 
 const ReviewPage = ({ params } : any) => {
   const { isLoggedIn, getJwtToken } = useAuth();

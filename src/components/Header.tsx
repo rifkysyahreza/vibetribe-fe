@@ -23,7 +23,7 @@ const Header: React.FC = () => {
     const locationInputRef = useRef<HTMLInputElement>(null);
     const eventInputRef = useRef<HTMLInputElement>(null);
 
-    const baseUrl = "http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me";
+    const baseUrl = "http://vibetribe-be-production.up.railway.app";
 
     useEffect(() => {
         const fetchUserData = async () => {

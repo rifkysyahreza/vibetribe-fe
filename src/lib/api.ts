@@ -1,7 +1,7 @@
 
 export const api = {
     login: async (email: string, password: string) => {
-      const response = await fetch("http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/login", {
+      const response = await fetch("http://vibetribe-be-production.up.railway.app/api/v1/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -16,7 +16,7 @@ export const api = {
     },
   
     getUserDetails: async (token: string) => {
-      const response = await fetch("http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/user/details", {
+      const response = await fetch("http://vibetribe-be-production.up.railway.app/api/v1/user/details", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -32,7 +32,7 @@ export const api = {
   };
   
   export const submitPayment = async (eventId: string, formData: { fullName: string, email: string, paymentMethod: string }) => {
-    const response = await fetch("http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/transactions", {
+    const response = await fetch("http://vibetribe-be-production.up.railway.app/api/v1/transactions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -50,7 +50,7 @@ export const api = {
 
 
 export const fetchEventDetails = async (slug: string) => {
-    const response = await fetch(`http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/events/${slug}`);
+    const response = await fetch(`http://vibetribe-be-production.up.railway.app/api/v1/events/${slug}`);
     if (!response.ok) {
       throw new Error("Event not found");
     }

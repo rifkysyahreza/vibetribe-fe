@@ -18,7 +18,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     const email = localStorage.getItem("email");
 
     if (token) {
-      fetch("http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/user/details", {
+      fetch("http://vibetribe-be-production.up.railway.app/api/v1/user/details", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,

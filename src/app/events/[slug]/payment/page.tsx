@@ -8,7 +8,7 @@ import { useAuth } from "@/context/AuthContext";
 import Link from 'next/link';
 
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me';
+const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://vibetribe-be-production.up.railway.app';
 
 const PaymentPage = ({ params } : any ) => {
   const { getJwtToken } = useAuth();
@@ -90,7 +90,7 @@ const PaymentPage = ({ params } : any ) => {
   const fetchUserDetails = async () => {
     try {
       const token = getJwtToken();
-      const response = await fetch("http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/user/details", {
+      const response = await fetch("http://vibetribe-be-production.up.railway.app/api/v1/user/details", {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
 

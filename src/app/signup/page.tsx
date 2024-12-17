@@ -39,7 +39,7 @@ const Signup: React.FC = () => {
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/signup', {
+      const response = await fetch('http://vibetribe-be-production.up.railway.app/api/v1/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -54,15 +54,15 @@ const CustomerDashboard: React.FC = () => {
     const fetchData = async () => {
       try {
         const [responseUpcoming, responsePast, responseProfile] = await Promise.all([
-          fetch("http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/events/upcoming", {
+          fetch("http://vibetribe-be-production.up.railway.app/api/v1/events/upcoming", {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
           }),
-          fetch("http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/events/past", {
+          fetch("http://vibetribe-be-production.up.railway.app/api/v1/events/past", {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
           }),
-          fetch("http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/user/details", {
+          fetch("http://vibetribe-be-production.up.railway.app/api/v1/user/details", {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
           }),
@@ -135,7 +135,7 @@ const CustomerDashboard: React.FC = () => {
     };
 
     try {
-      const response = await fetch("http://vibetribe-backend-shj1ro-029a2b-38-45-65-22.traefik.me/api/v1/user/update", {
+      const response = await fetch("http://vibetribe-be-production.up.railway.app/api/v1/user/update", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
